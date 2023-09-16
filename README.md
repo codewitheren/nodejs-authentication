@@ -2,6 +2,8 @@
 
 Bu proje, basit bir Node.js kimlik doğrulama örneğini içermektedir. Kullanıcıların kaydolmasını, giriş yapmasını ve oturum açmasını sağlayan bir web uygulamasıdır.
 
+[Site](https://node-js-fisrt-example.onrender.com/user/register)
+
 ## Başlangıç
 
 Bu talimatlar, projeyi yerel makinenizde çalıştırmak ve geliştirmek için bir kopyasını elde etmenize yardımcı olacaktır.
@@ -38,9 +40,19 @@ Bu projeyi çalıştırmak için aşağıdaki yazılımlara ihtiyacınız vardı
    ```bash
    npm start
    
-## Kullanım
+### API Kullanımı (Postman ile Test Etme)
 
-Bu projenin API'sini test etmek için Postman veya benzeri bir API test aracı kullanabilirsiniz.
+Bu projenin API'sini test etmek için Postman veya benzeri bir API test aracı kullanabilirsiniz. Aşağıda, API'nin nasıl kullanılacağına dair bazı örnekler bulunmaktadır.
+
+### Kaydolma (Register)
+
+Yeni bir kullanıcı kaydı oluşturmak için:
+
+- **HTTP Method**: POST
+- **Endpoint**: https://node-js-fisrt-example.onrender.com/user/register
+- **Veri Formatı**: JSON
+
+Örnek Veri:
 
 ```json
 {
