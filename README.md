@@ -2,7 +2,7 @@
 
 Bu proje, basit bir Node.js kimlik doğrulama örneğini içermektedir. Kullanıcıların kaydolmasını, giriş yapmasını ve oturum açmasını sağlayan bir web uygulamasıdır.
 
-[Site](https://node-js-fisrt-example.onrender.com/user/register)
+[Site](https://node-js-fisrt-example.onrender.com)
 
 ## Başlangıç
 
