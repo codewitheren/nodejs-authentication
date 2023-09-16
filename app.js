@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
+const {join} = require('path');
 
 const app = express();
 
@@ -10,6 +11,8 @@ const app = express();
 // express.urlencoded({ extended: true }): Bu middleware, gelen isteklerin içeriğini URL kodlanmış (form verileri gibi) verilere dönüştürür. { extended: true } seçeneği, işlem sırasında karmaşık nesneleri (örneğin, daha derin nesneler içeren diziler) destekler. Bu middleware, web formlarından veya benzeri veri gönderimlerinden gelen istekleri işlemek için kullanışlıdır.
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(express.static(join(__dirname, 'public')));
 
 mongoose.connect(process.env.DB_URL, {
   useNewUrlParser: true,
@@ -24,6 +27,10 @@ db.on("error", (err) => {
 
 db.once("open", () => {
   console.log("MongoDB connection successfully established");
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
 });
 
 app.use("/user", require("./routes/user"));

@@ -5,7 +5,8 @@ const postSchema = new Schema(
   {
     text: {
       type: "string",
-      required: true
+      required: true,
+      unique: false
     }
   },
   {
